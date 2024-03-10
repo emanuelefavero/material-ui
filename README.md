@@ -28,9 +28,3 @@ This is a simple project to test the React Material UI library.
 ## License
 
 - [MIT](LICENSE.md)
-
-&nbsp;
-
-&nbsp;
-
-[**Go To Top &nbsp; ⬆️**](#material-ui)
