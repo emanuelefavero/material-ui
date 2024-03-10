@@ -24,3 +24,13 @@ This is a simple project to test the React Material UI library.
 - [Vite](https://vitejs.dev/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [React](https://reactjs.org/)
+
+## License
+
+- [MIT](LICENSE.md)
+
+&nbsp;
+
+&nbsp;
+
+[**Go To Top &nbsp; ⬆️**](#material-ui)
