@@ -4,6 +4,7 @@ import CssBaseline from '@mui/material/CssBaseline'
 import Button from '@mui/material/Button'
 import Autocomplete from '@mui/material/Autocomplete'
 import TextField from '@mui/material/TextField'
+import ButtonGroup from '@mui/material/ButtonGroup'
 
 // DARK MODE
 const darkTheme = createTheme({
@@ -44,6 +45,14 @@ export default function App() {
               options={autocompleteOptions}
               renderInput={(params) => <TextField {...params} label='Movie' />}
             />
+          </li>
+
+          <li>
+            <ButtonGroup color='secondary' aria-label='button group'>
+              <Button>One</Button>
+              <Button>Two</Button>
+              <Button>Three</Button>
+            </ButtonGroup>
           </li>
         </ul>
       </main>
