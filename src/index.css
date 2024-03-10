@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 *,
 *::before,
 *::after {
@@ -8,18 +12,12 @@
 }
 
 body {
-  font-family: Roboto, sans-serif;
+  padding: 2rem;
 
-  background-color: #000;
-  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
 
-  min-height: 100vh;
-
-  /* display: flex; */
-  /* justify-content: center; */
-  /* align-items: center; */
-  /* flex-direction: column; */
-  /* text-align: center; */
-
-  /* overflow: hidden; */
+li {
+  margin-bottom: 2rem;
 }
