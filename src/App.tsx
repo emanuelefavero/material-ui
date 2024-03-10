@@ -9,6 +9,16 @@ import TextField from '@mui/material/TextField'
 const darkTheme = createTheme({
   palette: {
     mode: 'dark',
+
+    // Custom primary color
+    primary: {
+      main: '#9333ea',
+    },
+
+    // Custom secondary color
+    secondary: {
+      main: '#84cc16',
+    },
   },
 })
 
