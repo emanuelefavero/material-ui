@@ -10,6 +10,10 @@ import Checkbox from '@mui/material/Checkbox'
 import FormGroup from '@mui/material/FormGroup'
 import FormControlLabel from '@mui/material/FormControlLabel'
 
+// Import Material UI Icons
+import FavoriteBorder from '@mui/icons-material/FavoriteBorder'
+import Favorite from '@mui/icons-material/Favorite'
+
 // DARK MODE
 const darkTheme = createTheme({
   palette: {
@@ -113,6 +117,12 @@ export default function App() {
               <FormControlLabel control={<Checkbox />} label='Option 2' />
               <FormControlLabel control={<Checkbox />} label='Option 3' />
             </FormGroup>
+          </li>
+
+          {/* STATIC ICONS */}
+          <li>
+            <FavoriteBorder />
+            <Favorite color='secondary' />
           </li>
         </ul>
       </main>
