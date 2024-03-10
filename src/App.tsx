@@ -4,7 +4,11 @@ import Button from '@mui/material/Button'
 export default function App() {
   return (
     <>
-      <Button variant='contained'>Ciao</Button>
+      <h1>Material UI</h1>
+
+      <br />
+
+      <Button variant='contained'>Button</Button>
     </>
   )
 }
