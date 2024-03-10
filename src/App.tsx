@@ -1,5 +1,6 @@
 import './App.css'
 import { ThemeProvider, createTheme } from '@mui/material/styles'
+import { pink } from '@mui/material/colors' // Custom color
 import CssBaseline from '@mui/material/CssBaseline'
 import Button from '@mui/material/Button'
 import Autocomplete from '@mui/material/Autocomplete'
@@ -16,7 +17,7 @@ const darkTheme = createTheme({
 
     // Custom primary color
     primary: {
-      main: '#9333ea',
+      main: '#a855f7',
     },
 
     // Custom secondary color
@@ -37,9 +38,34 @@ export default function App() {
         <h1 className='text-3xl font-bold mb-8'>Material UI</h1>
 
         <ul>
+          {/* CUSTOM STYLES */}
+          <li>
+            <Button
+              variant='contained'
+              sx={{
+                color: pink[50],
+                backgroundColor: pink[600],
+
+                // Hover
+                '&:hover': {
+                  backgroundColor: pink[400],
+                },
+
+                // Active
+                '&:active': {
+                  backgroundColor: pink[800],
+                  transform: 'scale(0.95)', // custom styles
+                  transition: 'transform 0.2s',
+                },
+              }}
+            >
+              Button
+            </Button>
+          </li>
+
           <li>
             {/* BUTTON */}
-            <Button variant='contained'>Button</Button>
+            <Button variant='outlined'>Button</Button>
           </li>
 
           <li>
@@ -62,8 +88,18 @@ export default function App() {
           {/* CHECKBOX (without label) */}
           <li>
             <Checkbox defaultChecked />
-            <Checkbox color='secondary' />
+            <Checkbox color='success' />
             <Checkbox disabled />
+
+            {/* Checkbox with custom color */}
+            <Checkbox
+              sx={{
+                color: pink[600],
+                '&.Mui-checked': {
+                  color: pink[400],
+                },
+              }}
+            />
           </li>
 
           {/* CHECKBOX (with label) */}
