@@ -7,6 +7,10 @@ This is a simple project to test the React Material UI library.
 > Note: The project is built with Vite and uses TypeScript
 > Note: This is a work in progress. Expect more features to be added soon
 
+#### Screenshot
+
+<img src="screenshot.png" alt="screenshot" width="300">
+
 ## Installation
 
 - Clone the repository
