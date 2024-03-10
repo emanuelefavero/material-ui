@@ -1,32 +1,50 @@
 import './App.css'
+import { ThemeProvider, createTheme } from '@mui/material/styles'
+import CssBaseline from '@mui/material/CssBaseline'
 import Button from '@mui/material/Button'
 import Autocomplete from '@mui/material/Autocomplete'
 import TextField from '@mui/material/TextField'
 
+// DARK MODE
+const darkTheme = createTheme({
+  palette: {
+    mode: 'dark',
+  },
+})
+
 export default function App() {
   return (
-    <main className='max-w-screen-sm'>
-      <h1 className='text-3xl font-bold mb-8'>Material UI</h1>
+    // DARK MODE
+    <ThemeProvider theme={darkTheme}>
+      <CssBaseline />
 
-      <ul>
-        <li>
-          {/* BUTTON */}
-          <Button variant='contained'>Button</Button>
-        </li>
+      {/* MAIN */}
+      <main className='max-w-screen-sm'>
+        <h1 className='text-3xl font-bold mb-8'>Material UI</h1>
 
-        <li>
-          {/* AUTOCOMPLETE */}
-          <Autocomplete
-            options={autocompleteOptions}
-            renderInput={(params) => <TextField {...params} label='Movie' />}
-          />
-        </li>
-      </ul>
-    </main>
+        <ul>
+          <li>
+            {/* BUTTON */}
+            <Button variant='contained'>Button</Button>
+          </li>
+
+          <li>
+            {/* AUTOCOMPLETE */}
+            <Autocomplete
+              options={autocompleteOptions}
+              renderInput={(params) => <TextField {...params} label='Movie' />}
+            />
+          </li>
+        </ul>
+      </main>
+    </ThemeProvider>
   )
 }
 
-// Utils and Data
+// ----------------------------------------------------------------------------
+// UTILS AND DATA
+
+// Autocomplete options
 const autocompleteOptions = [
   { label: 'Titanic', year: 1997 },
   { label: 'Jurassic Park', year: 1993 },
