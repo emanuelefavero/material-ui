@@ -124,6 +124,11 @@ export default function App() {
             <FavoriteBorder />
             <Favorite color='secondary' />
           </li>
+
+          {/* CHECKBOX (with Icons) */}
+          <li>
+            <Checkbox icon={<FavoriteBorder />} checkedIcon={<Favorite />} />
+          </li>
         </ul>
       </main>
     </ThemeProvider>
