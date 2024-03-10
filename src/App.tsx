@@ -6,6 +6,8 @@ import Autocomplete from '@mui/material/Autocomplete'
 import TextField from '@mui/material/TextField'
 import ButtonGroup from '@mui/material/ButtonGroup'
 import Checkbox from '@mui/material/Checkbox'
+import FormGroup from '@mui/material/FormGroup'
+import FormControlLabel from '@mui/material/FormControlLabel'
 
 // DARK MODE
 const darkTheme = createTheme({
@@ -60,8 +62,21 @@ export default function App() {
           {/* CHECKBOX (without label) */}
           <li>
             <Checkbox defaultChecked />
-            <Checkbox />
+            <Checkbox color='secondary' />
             <Checkbox disabled />
+          </li>
+
+          {/* CHECKBOX (with label) */}
+          <li>
+            <FormGroup>
+              <FormControlLabel
+                control={<Checkbox />}
+                label='Option 1'
+                required
+              />
+              <FormControlLabel control={<Checkbox />} label='Option 2' />
+              <FormControlLabel control={<Checkbox />} label='Option 3' />
+            </FormGroup>
           </li>
         </ul>
       </main>
