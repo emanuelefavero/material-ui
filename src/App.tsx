@@ -5,6 +5,7 @@ import Button from '@mui/material/Button'
 import Autocomplete from '@mui/material/Autocomplete'
 import TextField from '@mui/material/TextField'
 import ButtonGroup from '@mui/material/ButtonGroup'
+import Checkbox from '@mui/material/Checkbox'
 
 // DARK MODE
 const darkTheme = createTheme({
@@ -47,12 +48,20 @@ export default function App() {
             />
           </li>
 
+          {/* BUTTON GROUP */}
           <li>
             <ButtonGroup color='secondary' aria-label='button group'>
               <Button>One</Button>
               <Button>Two</Button>
               <Button>Three</Button>
             </ButtonGroup>
+          </li>
+
+          {/* CHECKBOX (without label) */}
+          <li>
+            <Checkbox defaultChecked />
+            <Checkbox />
+            <Checkbox disabled />
           </li>
         </ul>
       </main>
