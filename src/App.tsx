@@ -22,6 +22,10 @@ import {
   Radio,
   Fab,
   Rating,
+  Box,
+  InputLabel,
+  MenuItem,
+  Select,
 } from '@mui/material'
 
 // Import Material UI Icons
@@ -48,8 +52,8 @@ const darkTheme = createTheme({
 
 // -< App >--------------------------------------------------------------------
 export default function App() {
+  // Rating state
   const [ratingValue, setRatingValue] = useState<number | null>(4)
-
   interface RatingLabelsType {
     [key: number]: string
   }
@@ -60,6 +64,9 @@ export default function App() {
     4: 'Very Good',
     5: 'Excellent',
   }
+
+  // Select state
+  const [selectValue, setSelectValue] = useState<string>('')
 
   return (
     // DARK MODE
@@ -199,6 +206,26 @@ export default function App() {
               onChange={(_, newValue) => setRatingValue(newValue)}
             />
             <div>{ratingValue && ratingLabels[ratingValue]}</div>
+          </li>
+
+          {/* SELECT */}
+          <li>
+            <Box sx={{ minWidth: 120 }}>
+              <FormControl fullWidth>
+                <InputLabel id='select-label'>Age</InputLabel>
+                <Select
+                  labelId='select-label'
+                  id='select'
+                  label='Age'
+                  value={selectValue}
+                  onChange={(event) => setSelectValue(event.target.value)}
+                >
+                  <MenuItem value='Ten'>Ten</MenuItem>
+                  <MenuItem value='Twenty'>Twenty</MenuItem>
+                  <MenuItem value='Thirty'>Thirty</MenuItem>
+                </Select>
+              </FormControl>
+            </Box>
           </li>
         </ul>
       </main>
