@@ -15,6 +15,9 @@ import RadioGroup from '@mui/material/RadioGroup'
 import Radio from '@mui/material/Radio'
 import Fab from '@mui/material/Fab'
 
+// Import Material UI Typography
+import Typography from '@mui/material/Typography'
+
 // Import Material UI Icons
 import FavoriteBorder from '@mui/icons-material/FavoriteBorder'
 import Favorite from '@mui/icons-material/Favorite'
@@ -155,7 +158,8 @@ export default function App() {
                 <FormControlLabel
                   value='mango'
                   control={<Radio />}
-                  label='🥭'
+                  // TIP: The Typography component can be used to change the size of the icon
+                  label={<Typography sx={{ fontSize: '1rem' }}>🥭</Typography>}
                 />
                 <FormControlLabel
                   value='banana'
