@@ -1,26 +1,28 @@
 import './App.css'
 import { useState } from 'react'
 
-// Import Material UI components
+// Import Material UI styles
 import { ThemeProvider, createTheme } from '@mui/material/styles'
-import { pink } from '@mui/material/colors' // Custom color
-import CssBaseline from '@mui/material/CssBaseline'
-import Button from '@mui/material/Button'
-import Autocomplete from '@mui/material/Autocomplete'
-import TextField from '@mui/material/TextField'
-import ButtonGroup from '@mui/material/ButtonGroup'
-import Checkbox from '@mui/material/Checkbox'
-import FormGroup from '@mui/material/FormGroup'
-import FormControl from '@mui/material/FormControl'
-import FormControlLabel from '@mui/material/FormControlLabel'
-import FormLabel from '@mui/material/FormLabel'
-import RadioGroup from '@mui/material/RadioGroup'
-import Radio from '@mui/material/Radio'
-import Fab from '@mui/material/Fab'
-import Rating from '@mui/material/Rating'
+import Typography from '@mui/material/Typography' // Custom color
+import { pink } from '@mui/material/colors'
 
-// Import Material UI Typography
-import Typography from '@mui/material/Typography'
+// Import Material UI components
+import {
+  CssBaseline,
+  Button,
+  Autocomplete,
+  TextField,
+  ButtonGroup,
+  Checkbox,
+  FormGroup,
+  FormControl,
+  FormControlLabel,
+  FormLabel,
+  RadioGroup,
+  Radio,
+  Fab,
+  Rating,
+} from '@mui/material'
 
 // Import Material UI Icons
 import FavoriteBorder from '@mui/icons-material/FavoriteBorder'
@@ -44,6 +46,7 @@ const darkTheme = createTheme({
   },
 })
 
+// -< App >--------------------------------------------------------------------
 export default function App() {
   const [ratingValue, setRatingValue] = useState<number | null>(4)
 
