@@ -26,12 +26,16 @@ import {
   InputLabel,
   MenuItem,
   Select,
+  Stack,
+  Slider,
 } from '@mui/material'
 
 // Import Material UI Icons
 import FavoriteBorder from '@mui/icons-material/FavoriteBorder'
 import Favorite from '@mui/icons-material/Favorite'
 import AddIcon from '@mui/icons-material/Add'
+import VolumeDown from '@mui/icons-material/VolumeDown'
+import VolumeUp from '@mui/icons-material/VolumeUp'
 
 // DARK MODE
 const darkTheme = createTheme({
@@ -67,6 +71,9 @@ export default function App() {
 
   // Select state
   const [selectValue, setSelectValue] = useState<string>('')
+
+  // Slider state
+  const [sliderValue, setSliderValue] = useState<number>(30)
 
   return (
     // DARK MODE
@@ -225,6 +232,21 @@ export default function App() {
                   <MenuItem value='Thirty'>Thirty</MenuItem>
                 </Select>
               </FormControl>
+            </Box>
+          </li>
+
+          {/* SLIDER */}
+          <li>
+            <Box sx={{ width: 200 }}>
+              <Stack spacing={2} direction='row' alignItems='center'>
+                <VolumeDown />
+                <Slider
+                  aria-label='Volume'
+                  value={sliderValue}
+                  onChange={(_, newValue) => setSliderValue(newValue as number)}
+                />
+                <VolumeUp />
+              </Stack>
             </Box>
           </li>
         </ul>
