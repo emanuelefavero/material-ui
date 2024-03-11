@@ -8,7 +8,11 @@ import TextField from '@mui/material/TextField'
 import ButtonGroup from '@mui/material/ButtonGroup'
 import Checkbox from '@mui/material/Checkbox'
 import FormGroup from '@mui/material/FormGroup'
+import FormControl from '@mui/material/FormControl'
 import FormControlLabel from '@mui/material/FormControlLabel'
+import FormLabel from '@mui/material/FormLabel'
+import RadioGroup from '@mui/material/RadioGroup'
+import Radio from '@mui/material/Radio'
 import Fab from '@mui/material/Fab'
 
 // Import Material UI Icons
@@ -137,6 +141,29 @@ export default function App() {
             <Fab color='primary' aria-label='add'>
               <AddIcon />
             </Fab>
+          </li>
+
+          {/* RADIO GROUP */}
+          <li>
+            <FormControl>
+              <FormLabel id='radio-group-label'>Fruit</FormLabel>
+              <RadioGroup
+                aria-labelledby='radio-group-label'
+                defaultValue='mango'
+                name='fruit'
+              >
+                <FormControlLabel
+                  value='mango'
+                  control={<Radio />}
+                  label='🥭'
+                />
+                <FormControlLabel
+                  value='banana'
+                  control={<Radio />}
+                  label='🍌'
+                />
+              </RadioGroup>
+            </FormControl>
           </li>
         </ul>
       </main>
