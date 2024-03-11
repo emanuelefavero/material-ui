@@ -1,4 +1,7 @@
 import './App.css'
+import { useState } from 'react'
+
+// Import Material UI components
 import { ThemeProvider, createTheme } from '@mui/material/styles'
 import { pink } from '@mui/material/colors' // Custom color
 import CssBaseline from '@mui/material/CssBaseline'
@@ -14,6 +17,7 @@ import FormLabel from '@mui/material/FormLabel'
 import RadioGroup from '@mui/material/RadioGroup'
 import Radio from '@mui/material/Radio'
 import Fab from '@mui/material/Fab'
+import Rating from '@mui/material/Rating'
 
 // Import Material UI Typography
 import Typography from '@mui/material/Typography'
@@ -41,6 +45,19 @@ const darkTheme = createTheme({
 })
 
 export default function App() {
+  const [ratingValue, setRatingValue] = useState<number | null>(4)
+
+  interface RatingLabelsType {
+    [key: number]: string
+  }
+  const ratingLabels: RatingLabelsType = {
+    1: 'Poor',
+    2: 'Ok',
+    3: 'Good',
+    4: 'Very Good',
+    5: 'Excellent',
+  }
+
   return (
     // DARK MODE
     <ThemeProvider theme={darkTheme}>
@@ -168,6 +185,17 @@ export default function App() {
                 />
               </RadioGroup>
             </FormControl>
+          </li>
+
+          {/* RATING */}
+          <li>
+            <Typography component='legend'>Rating</Typography>
+            <Rating
+              name='rating'
+              value={ratingValue}
+              onChange={(_, newValue) => setRatingValue(newValue)}
+            />
+            <div>{ratingValue && ratingLabels[ratingValue]}</div>
           </li>
         </ul>
       </main>
