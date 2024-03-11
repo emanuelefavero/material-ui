@@ -9,10 +9,12 @@ import ButtonGroup from '@mui/material/ButtonGroup'
 import Checkbox from '@mui/material/Checkbox'
 import FormGroup from '@mui/material/FormGroup'
 import FormControlLabel from '@mui/material/FormControlLabel'
+import Fab from '@mui/material/Fab'
 
 // Import Material UI Icons
 import FavoriteBorder from '@mui/icons-material/FavoriteBorder'
 import Favorite from '@mui/icons-material/Favorite'
+import AddIcon from '@mui/icons-material/Add'
 
 // DARK MODE
 const darkTheme = createTheme({
@@ -128,6 +130,13 @@ export default function App() {
           {/* CHECKBOX (with Icons) */}
           <li>
             <Checkbox icon={<FavoriteBorder />} checkedIcon={<Favorite />} />
+          </li>
+
+          {/* FAB (Floating Action Button) */}
+          <li>
+            <Fab color='primary' aria-label='add'>
+              <AddIcon />
+            </Fab>
           </li>
         </ul>
       </main>
