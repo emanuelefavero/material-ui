@@ -31,11 +31,13 @@ import {
 } from '@mui/material'
 
 // Import Material UI Icons
-import FavoriteBorder from '@mui/icons-material/FavoriteBorder'
-import Favorite from '@mui/icons-material/Favorite'
-import AddIcon from '@mui/icons-material/Add'
-import VolumeDown from '@mui/icons-material/VolumeDown'
-import VolumeUp from '@mui/icons-material/VolumeUp'
+import {
+  FavoriteBorder,
+  Favorite,
+  Add as AddIcon,
+  VolumeDown,
+  VolumeUp,
+} from '@mui/icons-material'
 
 // DARK MODE
 const darkTheme = createTheme({
